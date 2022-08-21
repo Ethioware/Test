@@ -18,13 +18,14 @@ public class Bill {
     private int Price;
     private int Product;
     private int Total;
+    private int Time;
+
 
     public Bill() {
 
     }
 
-    public Bill(@NotNull String customerName, @NotNull String itemName, int amount, int price, int product, int total) {
-
+    public Bill(@NotNull String customerName, @NotNull String itemName, int amount, int price, int product, int total, int Time) {
 
         CustomerName = customerName;
         ItemName = itemName;
@@ -32,6 +33,7 @@ public class Bill {
         Price = price;
         Product = product;
         Total = total;
+        this.Time = Time;
     }
 
     public int getId() {
@@ -60,5 +62,41 @@ public class Bill {
 
     public int getTotal() {
         return Total;
+    }
+
+    public int getTime() {
+        return Time;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public void setCustomerName(String customerName) {
+        CustomerName = customerName;
+    }
+
+    public void setItemName(String itemName) {
+        ItemName = itemName;
+    }
+
+    public void setAmount(int amount) {
+        Amount = amount;
+    }
+
+    public void setPrice(int price) {
+        Price = price;
+    }
+
+    public void setProduct(int product) {
+        Product = product;
+    }
+
+    public void setTotal(int total) {
+        Total = total;
+    }
+
+    public void setTime(int time) {
+        Time = time;
     }
 }
