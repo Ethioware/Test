@@ -18,14 +18,10 @@ public class Bill {
     private int Price;
     private int Product;
     private int Total;
-    private int Time;
+    private String Time;
+    private String Date;
 
-
-    public Bill() {
-
-    }
-
-    public Bill(@NotNull String customerName, @NotNull String itemName, int amount, int price, int product, int total, int Time) {
+    public Bill(@NotNull String customerName, @NotNull String itemName, int amount, int price, int product, int total, String Time, String Date) {
 
         CustomerName = customerName;
         ItemName = itemName;
@@ -34,7 +30,13 @@ public class Bill {
         Product = product;
         Total = total;
         this.Time = Time;
+        this.Date = Date;
     }
+
+    public Bill() {
+
+    }
+
 
     public int getId() {
         return id;
@@ -62,10 +64,6 @@ public class Bill {
 
     public int getTotal() {
         return Total;
-    }
-
-    public int getTime() {
-        return Time;
     }
 
     public void setId(int id) {
@@ -96,7 +94,19 @@ public class Bill {
         Total = total;
     }
 
-    public void setTime(int time) {
+    public void setTime(String time) {
         Time = time;
+    }
+
+    public String getTime() {
+        return Time;
+    }
+
+    public String getDate() {
+        return Date;
+    }
+
+    public void setDate(String date) {
+        Date = date;
     }
 }
